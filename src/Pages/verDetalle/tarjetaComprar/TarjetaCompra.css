@@ -1,0 +1,24 @@
+.tarjeta-compra {
+    position: flex;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #fff; /* Color de fondo de la tarjeta */
+    z-index: 1; /* Asegura que la tarjeta esté encima del contenido */
+    background-color: #f0f0f0; /* Color de fondo grisáceo */
+}
+
+/* Estilos para el botón de comprar */
+.comprar-button {
+    background-color:  #FB8500; /* Cambia el color del botón según tus preferencias */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    justify-content: end;
+    align-items: end;
+}
