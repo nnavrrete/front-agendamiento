@@ -1,15 +1,35 @@
 import React from 'react';
-import { FaConciergeBell, FaCocktail, FaBed, FaWifi, FaTv, FaCoffee } from 'react-icons/fa';
+import { FaConciergeBell, FaCocktail, FaBed, FaWifi, FaTv, FaCoffee, FaUmbrellaBeach, FaPeopleGroup } from 'react-icons/fa';
 import { BiFridge } from "react-icons/bi";
+import { CgModem } from "react-icons/cg";
+import { MdFreeBreakfast, MdOutlinePool, MdGolfCourse, MdFoodBank  } from "react-icons/md";
+import { TbMassage, TbBeach } from "react-icons/tb";
+import { RiTempColdLine } from "react-icons/ri";
+import { TbBathFilled } from "react-icons/tb";
+import { GrRestaurant } from "react-icons/gr";
+
 
 export const serviceIcons = {
     'Restaurante': <FaConciergeBell />,
     'Bar': <FaCocktail />,
-    'Servicio de Habitaciones': <FaBed />,
+    'Servicio de habitaciones': <FaBed />,
     'Wi-Fi': <FaWifi />,
     'TV de pantalla plana': <FaTv />,
     'Desayuno buffet': <FaCoffee />,
-    'Minibar': <BiFridge />
+    'Minibar': <BiFridge />,
+    'Acceso a la playa privada': <FaUmbrellaBeach/>,
+    'TV por cable': <CgModem/>,
+    'Desayuno a la carta':<MdFreeBreakfast/>,
+    'Piscina': <MdOutlinePool/>,
+    'Spa': <TbMassage/>,
+    'Campo de Golf': <MdGolfCourse/>,
+    'Playa Privada': <TbBeach/>,
+    'Aire acondicionado': <RiTempColdLine />,
+    'Baño de mármol': <TbBathFilled />,
+    'Desayuno gourmet': <MdFoodBank />,
+    'Restaurante gourmet':<GrRestaurant />,
+    'Sala de Conferencias': <FaPeopleGroup />    
+
 };
 
 export const renderStars = (valoracion) => {

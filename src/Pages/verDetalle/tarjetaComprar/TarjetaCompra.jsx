@@ -5,13 +5,9 @@ import './TarjetaCompra.css';
 const TarjetaCompra = () => {
     const location = useLocation();
     const paquete = location.state;
-    const [paqueteSeleccionado, setPaqueteSeleccionado] = useState([])
+  
 
-    const HandeleClickCompra = () => {
-        setPaqueteSeleccionado(paquete)
-
-    }
-
+  
     if (!paquete) {
         return <div>No se ha proporcionado un paquete para ver detalles.</div>;
     }
@@ -24,7 +20,7 @@ const TarjetaCompra = () => {
             <p>Precio por vuelo: ${precio_vuelo}</p>
             <p>Precio por noche: ${precio_noche}</p>
             <div className=" d-flex w-100 justify-content-end align-items-end" >
-            <button onClick={HandeleClickCompra()} className="comprar-button">Comprar</button>
+            <button  className="comprar-button">Comprar</button>
             </div>
         </div>
     );

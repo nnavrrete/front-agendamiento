@@ -1,7 +1,7 @@
-export async function getMasvistos() {
+export async function getDestacados() {
     try {
         const apiUrl = import.meta.env.VITE_API_URL;
-        const response = await fetch(`${apiUrl}/paquetes/mas-vistos`);
+        const response = await fetch(`${apiUrl}/paquetes/destacados`);
         if (!response.ok) {
             throw new Error(response.statusText);
         }
@@ -12,4 +12,6 @@ export async function getMasvistos() {
     }
     throw error;
 }
+
+
 

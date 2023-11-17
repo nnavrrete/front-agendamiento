@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { getAeropuertos, getUbicacion, getOfertas ,agregarVista, getMasvistos } from '../../api';
+import { getAeropuertos, getUbicacion, getOfertas ,agregarVista, getMasvistos, getDestacados } from '../../api';
 import BuscaViaje from '../../Components/buscaViaje/BuscaViaje';
 import LoadingSpinner from '../../Components/LoadingSpinner/LoadingSpinner';
 import { useNavigate } from 'react-router-dom'; // Importa useNavigate desde react-router-dom
 import Carrusel from './carruseloferta'
-import carruselGeneral from './carrruselGeneral'
+import CarruselGeneral from './carrusel'
+
 
 
 import './Home.css';
@@ -16,10 +17,11 @@ const Home = () => {
     const [loading, setLoading] = useState(true);
     const [paquetesOfertas, setPaquetesOfertas]= useState([])
     const [MasVistosState, setMasVistos] = useState([]);
+    const [destacados, setDestacados] = useState([])
     const [ubicacion, setUbicacion]= useState({Ciudad:''})
     const [error, setError] = useState(null);
     const navigate = useNavigate(); // Obtén la función de navegación
-
+    
     useEffect(() => {
         const fetchAeropuertos = async () => {
             try {
@@ -49,7 +51,6 @@ const Home = () => {
 
          fetchUbicacion();
     }, []);
-  console.log(ubicacion)
 
 
     useEffect(() => {
@@ -68,22 +69,37 @@ const Home = () => {
     }, [ubicacion]);
 
 
-    // useEffect(() => {
-    //     const fetchMasVistos = async () => {
-    //         try {
-    //             const data = await getMasvistos(ubicacion);
-    //             setMasVistos(data);
-    //         } catch (error) {
-    //             setError(error);
-    //         } finally {
-    //             setLoading(false);
-    //         }
-    //     };
+    useEffect(() => {
+        const fetchMasVistos = async () => {
+            try {
+                const data = await getMasvistos(ubicacion);
+                setMasVistos(data);
+            } catch (error) {
+                setError(error);
+            } finally {
+                setLoading(false);
+            }
+        };
     
-    //     fetchMasVistos();
-    // }, [ubicacion]);
+        fetchMasVistos();
+    }, [ubicacion]);
 
-    console.log(MasVistosState)
+    useEffect(() => {
+        const fetchDestacados = async () => {
+            try {
+                const data = await getDestacados(ubicacion);
+                setDestacados(data);
+            } catch (error) {
+                setError(error);
+            } finally {
+                setLoading(false);
+            }
+        };
+    
+        fetchDestacados();
+    }, [ubicacion]);
+
+   
 
     const handleBuscarViaje = (respuesta) => {
         console.log(respuesta);
@@ -135,10 +151,14 @@ const Home = () => {
             
                 {paquetesOfertas != null ? (
                     <div className=''>
-                       <div className= " d-flex mt-4 mb-2 me-5 w-25 justify-content-end "><h1 className='text-end'>Ofertas</h1></div> 
+                       <div className= " d-flex mt-4 mb-2 me-5  justify-content-end " style={{width:"30%"}}><h1 className='text-end'>Ofertas</h1></div> 
                         <Carrusel paquetes={paquetesOfertas} handleBuy = {handleComprar} />
+                        <div className= " d-flex mt-4 mb-2 me-5 justify-content-end " style={{width:"30%"}}><h1 className='text-end'>Mas Vistos</h1></div> 
+                        <CarruselGeneral paquetes={MasVistosState} handleBuy = {handleComprar} />   
+                        <div className= " d-flex mt-4 mb-2 me-5 justify-content-end " style={{width:"30%"}}><h1 className='text-end'>Mas valorados</h1></div> 
+                        <CarruselGeneral paquetes={destacados} handleBuy = {handleComprar} />                                           
                    </div>
-                    
+                                       
                 ) : (
                     <div className="d-flex align-items-center  justify-content-center">
              <div className="mt-5 align-items-center w-50 ">
@@ -147,6 +167,7 @@ const Home = () => {
            <div className="d-flex">
         <img src="/error.png" alt="yamsha" className="img-fluid" style={{ maxWidth: '60vh' }} />
        </div>
+       
        </div>
   
                 )}

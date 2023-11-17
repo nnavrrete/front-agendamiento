@@ -34,14 +34,14 @@ function OfferCard({ paquete, cardsToShow, VITE_PATH_IMAGES, handleBuy}) {
           </div>
           <div className="d-flex justify-content-between">
           <div className="fecha"> <div className="d-flex justify-content-between ">
-              <div className="bg-secondary text-white fw-bold rounded p-2 ida me-2">{formatFecha(paquete.fecha_init)} </div>
-              <div className="bg-primary text-white fw-bold rounded p-2"> {formatFecha(paquete.fecha_fin)}</div>  
+              <div className="bg-secondary text-white fw-bold rounded p-2 ida me-2">{paquete.fecha_init} 05 Nov </div>
+              <div className="bg-primary text-white fw-bold rounded p-2"> {paquete.fecha_fin} 10 Nov</div>  
             </div>
             <div className="bg-secondary-subtle w-100 rounded fw-bold p-2 mt-1" style={{color :"black"}}> Para {paquete.total_personas} Personas</div>
             </div>
           <div className="Information d-flex flex-column align-items-end">
-            <h3 className='text-secondary text-decoration-line-through'>${paquete.precio_vuelo}</h3>
-            <h3 className='fw-bold '>${paquete.precio_oferta_vuelo}</h3>
+            <h3 className='fw-bold'>${paquete.precio_vuelo}</h3>
+            
           </div></div>
           <div className='d-flex justify-content-end'><button className="btn btn-primary btn-card " onClick={() => handleBuy(paquete)} >Ver Paquete</button></div>
           

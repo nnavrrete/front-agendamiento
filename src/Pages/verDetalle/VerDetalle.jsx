@@ -89,13 +89,13 @@ const VerDetalle = () => {
             <Header/>
             <h1 className='mx-auto mt-2 w-75'>{nombre}</h1>
             <div className="d-flex justify-content-center  mx-auto verDetalleContainer w-100 mb-2">
-    <div className="galeria-container "style={{width: "60%"}} >
+         <div className="galeria-container "style={{width: "60%"}} >
         <ImageGallery items={imageGalleryItems} />
-    </div>
-    <div className="tarjeta-compra-container ms-2 w-25" >
+       </div>
+       <div className="tarjeta-compra-container ms-2 w-25" >
         <TarjetaCompra paquete={paquete} />
-    </div>
-</div>
+         </div>
+          </div>
 
 
             <div className="detalleHotelInfo mt-5" style={{marginLeft:"5rem"}}>
