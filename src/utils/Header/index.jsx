@@ -4,6 +4,7 @@ import "bootstrap-icons/font/bootstrap-icons.css"
 import "./Header.css";
 import { Navbar, Nav } from 'react-bootstrap';
 
+
 function NavBar() {
     return (
         <Navbar expand="md" className='navbar-lighter' style={{background:"#023047"}}>

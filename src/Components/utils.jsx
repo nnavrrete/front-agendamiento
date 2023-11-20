@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaConciergeBell, FaCocktail, FaBed, FaWifi, FaTv, FaCoffee, FaUmbrellaBeach, FaPeopleGroup } from 'react-icons/fa';
+import { FaConciergeBell, FaCocktail, FaBed, FaWifi, FaTv, FaCoffee, FaUmbrellaBeach } from 'react-icons/fa';
 import { BiFridge } from "react-icons/bi";
 import { CgModem } from "react-icons/cg";
 import { MdFreeBreakfast, MdOutlinePool, MdGolfCourse, MdFoodBank  } from "react-icons/md";
@@ -7,12 +7,13 @@ import { TbMassage, TbBeach } from "react-icons/tb";
 import { RiTempColdLine } from "react-icons/ri";
 import { TbBathFilled } from "react-icons/tb";
 import { GrRestaurant } from "react-icons/gr";
+//import { FaPeopleGroup } from 'react-icons/fa'; este icono genera error
 
 
 export const serviceIcons = {
     'Restaurante': <FaConciergeBell />,
     'Bar': <FaCocktail />,
-    'Servicio de habitaciones': <FaBed />,
+    'Servicio de Habitaciones': <FaBed />,
     'Wi-Fi': <FaWifi />,
     'TV de pantalla plana': <FaTv />,
     'Desayuno buffet': <FaCoffee />,
@@ -28,7 +29,7 @@ export const serviceIcons = {
     'Baño de mármol': <TbBathFilled />,
     'Desayuno gourmet': <MdFoodBank />,
     'Restaurante gourmet':<GrRestaurant />,
-    'Sala de Conferencias': <FaPeopleGroup />    
+    //'Sala de Conferencias': <FaPeopleGroup />,
 
 };
 
