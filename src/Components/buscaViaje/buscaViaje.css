@@ -5,11 +5,8 @@
     justify-content: center;
     width: 100%;
     margin-top: 20px;
-    background: rgb(30, 224, 219);
-    background: -moz-linear-gradient(0deg, rgba(30, 224, 219, 1) 0%, rgba(34, 159, 195, 1) 100%);
-    background: -webkit-linear-gradient(0deg, rgba(30, 224, 219, 1) 0%, rgba(34, 159, 195, 1) 100%);
-    background: linear-gradient(0deg, rgba(30, 224, 219, 1) 0%, rgba(34, 159, 195, 1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#1ee0db", endColorstr="#229fc3", GradientType=1);
+    background: rgb(33,158,188);
+    background: linear-gradient(180deg, rgba(33,158,188,1) 35%, rgba(142,202,230,1) 100%);
     max-width: 900px;
     margin: 0 auto;
     margin-top: 1rem;
@@ -17,8 +14,13 @@
     border-radius: 1em;
     box-shadow: 0 0 1em rgba(0, 0, 0, 0.333);
     gap: 0.5rem;
+    position: relative;
+    z-index: 1;
 }
 
+.container{
+    z-index: 4;
+}
 
 .Contenedor h1 {
     color: darkslategrey;
@@ -51,7 +53,7 @@
 .LabelPasajeros {
     display: block;
     margin-bottom: 5px;
-    color: darkslategrey;
+    color: #023047;
     /* Color del texto para las etiquetas, elige uno que combine con tu diseño */
     font-weight: bold;
 }
@@ -62,9 +64,9 @@
 .InputPasajeros {
     width: 100%;
     padding: 10px;
-    border: 2px solid #0277bd;
+    border: 1px solid #023047;
     /* Borde sólido con el color de la etiqueta */
-    border-radius: 5px;
+    border-radius: 4px;
     /* Bordes redondeados para los inputs */
     font-size: 16px;
     height: auto;

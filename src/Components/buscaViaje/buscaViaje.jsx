@@ -103,6 +103,7 @@ export default function BuscaViaje({ aeropuertos, onSubmit, placeholder, initial
     <>
 
       <div className="container">
+
         <div className="row">
           <div className="col-lg-6">
             <div className="ContenedorOrigen">
@@ -142,7 +143,7 @@ export default function BuscaViaje({ aeropuertos, onSubmit, placeholder, initial
         <div className="row">
           <div className="col-lg-12">
             <div className="ContenedorBoton">
-              <button className="btn btn-primary mt-2" onClick={handleSubmit}>
+              <button className="btn btn-primary mt-4" onClick={handleSubmit}>
                 Buscar
               </button>
             </div>
@@ -151,16 +152,16 @@ export default function BuscaViaje({ aeropuertos, onSubmit, placeholder, initial
       </div>
 
       <Modal show={!!error} onHide={() => setError(null)}>
-                <Modal.Header closeButton>
-                    <Modal.Title>Error</Modal.Title>
-                </Modal.Header>
-                <Modal.Body>{error}</Modal.Body>
-                <Modal.Footer>
-                    <Button variant="secondary" onClick={() => setError(null)}>
-                        Cerrar
-                    </Button>
-                </Modal.Footer>
-            </Modal>
+        <Modal.Header closeButton>
+          <Modal.Title>Error</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>{error}</Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={() => setError(null)}>
+            Cerrar
+          </Button>
+        </Modal.Footer>
+      </Modal>
 
     </>
   );

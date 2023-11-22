@@ -9,7 +9,7 @@ import { useNavigate } from 'react-router-dom';
 import { Collapse, Modal, Button } from 'react-bootstrap';
 import { MesString } from '../../Components/utils';
 
-import BuscaViaje from '../../Components/buscaViaje/BuscaViaje';
+import BuscaViaje from '../../Components/buscaViaje/buscaViaje';
 import ListaPaquetes from '../../Components/listaPaquetes/ListaPaquetes';
 import BotonOrdener from '../../Components/botonOrdenar/SortBy';
 import Header from '../../utils/Header';
@@ -177,6 +177,20 @@ const VerPaquetes = () => {
               </Button>
               <Collapse in={isCollapseOpen && anchoPantalla < 768}>
                 <div>
+                <div id="background-wrap">
+                    <div className="x1">
+                        <div className="cloud nube1"></div>
+                    </div>
+                    <div className="x2">
+                        <div className="cloud nube2"></div>
+                    </div>
+                    <div className="x3">
+                        <div className="cloud nube3"></div>
+                    </div>
+                    <div className="x4">
+                        <div className="cloud nube4"></div>
+                    </div>
+                </div>
                   <BuscaViaje
                     aeropuertos={aeropuertos}
                     placeholder={placeholder}
