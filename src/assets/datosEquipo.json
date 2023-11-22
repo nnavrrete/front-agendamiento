@@ -1,0 +1,51 @@
+[
+    {
+      "imagen": "src/assets/Equipo-img/test.avif",
+      "nombre": "Pedrito Alimaña",
+      "grupo": "admin",
+      "rol": "Lider Técnico"
+    },
+    {
+      "imagen": "src/assets/Equipo-img/test.avif",
+      "nombre": "Pedrito Alimaña",
+      "grupo": "admin",
+      "rol": "Lider Técnico"
+    },
+    {
+      "imagen": "src/assets/Equipo-img/test.avif",
+      "nombre": "Pedrito Alimaña",
+      "grupo": "desarrollador",
+      "rol": "Frontend"
+    },
+    {
+      "imagen": "src/assets/Equipo-img/test.avif",
+      "nombre": "Pedrito Alimaña",
+      "grupo": "desarrollador",
+      "rol": "Backend"
+    },
+    {
+      "imagen": "src/assets/Equipo-img/test.avif",
+      "nombre": "Pedrito Alimaña",
+      "grupo": "desarrollador",
+      "rol": "Backend"
+    },
+    {
+      "imagen": "src/assets/Equipo-img/test.avif",
+      "nombre": "Pedrito Alimaña",
+      "grupo": "desarrollador",
+      "rol": "Frontend"
+    },
+    {
+      "imagen": "src/assets/Equipo-img/test.avif",
+      "nombre": "Pedrito Alimaña",
+      "grupo": "desarrollador",
+      "rol": "Frontend"
+    },
+    {
+      "imagen": "src/assets/Equipo-img/test.avif",
+      "nombre": "Pedrito Alimaña",
+      "grupo": "seguridad",
+      "rol": "QA"
+    }
+    
+  ]
