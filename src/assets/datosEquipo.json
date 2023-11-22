@@ -1,50 +1,50 @@
 [
     {
       "imagen": "src/assets/Equipo-img/test.avif",
-      "nombre": "Pedrito Alimaña",
+      "nombre": "Juanito Alimaña",
       "grupo": "admin",
       "rol": "Lider Técnico",
       "github": "https://github.com/Bruxar"
     },
     {
       "imagen": "",
-      "nombre": "Pedrito Alimaña",
+      "nombre": "Juanito Alimaña",
       "grupo": "admin",
       "rol": "Lider Técnico"
     },
     {
       "imagen": "",
-      "nombre": "Pedrito Alimaña",
+      "nombre": "Juanito Alimaña",
       "grupo": "desarrollador",
       "rol": "Frontend"
     },
     {
       "imagen": "src/assets/Equipo-img/test.avif",
-      "nombre": "Pedrito Alimaña",
+      "nombre": "Juanito Alimaña",
       "grupo": "desarrollador",
       "rol": "Backend"
     },
     {
 
-      "nombre": "Pedrito Alimaña",
+      "nombre": "Juanito Alimaña",
       "grupo": "desarrollador",
       "rol": "Backend"
     },
     {
       "imagen": "src/assets/Equipo-img/test.avif",
-      "nombre": "Pedrito Alimaña",
+      "nombre": "Juanito Alimaña",
       "grupo": "desarrollador",
       "rol": "Frontend"
     },
     {
       "imagen": "src/assets/Equipo-img/test.avif",
-      "nombre": "Pedrito Alimaña",
+      "nombre": "Juanito Alimaña",
       "grupo": "desarrollador",
       "rol": "Frontend"
     },
     {
       "imagen": "",
-      "nombre": "Pedrito Alimaña",
+      "nombre": "Juanito Alimaña",
       "grupo": "seguridad",
       "rol": "QA"
     }
