@@ -3,7 +3,8 @@
       "imagen": "src/assets/Equipo-img/test.avif",
       "nombre": "Pedrito Alimaña",
       "grupo": "admin",
-      "rol": "Lider Técnico"
+      "rol": "Lider Técnico",
+      "github": "https://github.com/Bruxar"
     },
     {
       "imagen": "",
