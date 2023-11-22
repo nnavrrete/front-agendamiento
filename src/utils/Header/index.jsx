@@ -4,7 +4,6 @@ import "bootstrap-icons/font/bootstrap-icons.css"
 import "./Header.css";
 import { Navbar, Nav } from 'react-bootstrap';
 
-
 function NavBar() {
     return (
         <Navbar expand="md" className='navbar-lighter' style={{background:"#023047"}}>
@@ -12,14 +11,22 @@ function NavBar() {
                 <Navbar.Brand href='/'>
                     <img src="/logo.png" alt="logo" className='logo'/>
                 </Navbar.Brand>
-                    <div className='login-btn'>
+                <Navbar.Toggle aria-controls="menu" className='btn-colapse'/>
+                <Navbar.Collapse id="menu">
+                    <Nav className="me-auto justify-content-center">
+                        <Nav.Link className='link-izq d-flex justify-content-center' href="/nosotros">
+                            <i className="bi bi-info-circle-fill"></i> Nosotros
+                        </Nav.Link>
+                        <Nav.Link className='link-izq d-flex justify-content-center' href="">
+                            <i className="bi bi-telephone-fill"></i> Contacto
+                        </Nav.Link>
+                    </Nav>
                     <Nav className="mr-auto">
                         <Nav.Link className="btn" href="">
                                 <i className="bi bi-person-circle"></i> Ingresar
                         </Nav.Link>
                     </Nav>
-                    </div>
-
+                </Navbar.Collapse>
             </div>
         </Navbar>
     );

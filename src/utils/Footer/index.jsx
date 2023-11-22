@@ -10,7 +10,7 @@ function Footer(){
             </div>
             <nav className="footer-links">
                 <a href="/">Inicio</a>
-                <a href="/quienes-somos">¿Quiénes somos?</a>
+                <a href="/nosotros">Nosotros</a>
                 <a href="/hoteles">Hoteles</a>
                 <a href="/contacto">Contacto</a>
             </nav>

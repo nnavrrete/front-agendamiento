@@ -6,13 +6,13 @@
       "rol": "Lider Técnico"
     },
     {
-      "imagen": "src/assets/Equipo-img/test.avif",
+      "imagen": "",
       "nombre": "Pedrito Alimaña",
       "grupo": "admin",
       "rol": "Lider Técnico"
     },
     {
-      "imagen": "src/assets/Equipo-img/test.avif",
+      "imagen": "",
       "nombre": "Pedrito Alimaña",
       "grupo": "desarrollador",
       "rol": "Frontend"
@@ -24,7 +24,7 @@
       "rol": "Backend"
     },
     {
-      "imagen": "src/assets/Equipo-img/test.avif",
+
       "nombre": "Pedrito Alimaña",
       "grupo": "desarrollador",
       "rol": "Backend"
@@ -42,7 +42,7 @@
       "rol": "Frontend"
     },
     {
-      "imagen": "src/assets/Equipo-img/test.avif",
+      "imagen": "",
       "nombre": "Pedrito Alimaña",
       "grupo": "seguridad",
       "rol": "QA"
