@@ -38,7 +38,7 @@
   transform: translate(-50%, -50%);
   opacity: 0;
   transition: opacity 0.3s ease;
-  color: #023047;
+  color: #FB8500;
 }
 
 .tarjeta:hover .github-icon {
@@ -55,7 +55,7 @@
 
 .tarjeta h3{
   font-weight: 700;
-  color: #FB8500;
+  color: #023047;
 }
 
 .tarjeta p{

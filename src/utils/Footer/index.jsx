@@ -11,7 +11,6 @@ function Footer(){
             <nav className="footer-links">
                 <a href="/">Inicio</a>
                 <a href="/nosotros">Nosotros</a>
-                <a href="/hoteles">Hoteles</a>
                 <a href="/contacto">Contacto</a>
             </nav>
             <div className="rights">
