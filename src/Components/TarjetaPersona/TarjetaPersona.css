@@ -16,7 +16,7 @@
   position: relative;
   transition: all 0.2s ease;
   overflow: hidden;
-  background-color: #f8f9f;
+  background-color: #f8f9fA;
 }
 
 .tarjeta:hover {
