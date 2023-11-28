@@ -47,6 +47,12 @@
       "nombre": "Juanito Alimaña",
       "grupo": "seguridad",
       "rol": "QA"
+    },
+    {
+      "imagen": "",
+      "nombre": "Nicolas Navarrete",
+      "grupo": "desarrollador",
+      "rol": "Frontend",
+      "github": "https://github.com/nnavrrete"
     }
-    
   ]
