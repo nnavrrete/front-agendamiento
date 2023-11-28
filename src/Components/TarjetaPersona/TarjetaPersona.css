@@ -49,12 +49,13 @@
 }
 
 .tarjeta img {
-  height: auto;
-  width: 20%;
+  height: 7em;
+  width: 7em;
   min-width: 100px;
   border-radius: 50%;
   margin-bottom: 1em;
   border: 2px solid #FB8500;
+  object-fit:inherit;
 }
 
 .tarjeta h3{

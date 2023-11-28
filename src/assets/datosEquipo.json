@@ -1,52 +1,31 @@
 [
     {
-      "imagen": "src/assets/Equipo-img/test.avif",
-      "nombre": "Juanito Alimaña",
-      "grupo": "admin",
-      "rol": "Lider Técnico",
+      "imagen": "src/assets/Equipo-img/LucasArancibia.jpeg",
+      "nombre": "Lucas Arancibia",
+      "grupo": "desarrollador",
+      "rol": "Frontend",
       "github": "https://github.com/Bruxar"
     },
     {
-      "imagen": "",
-      "nombre": "Juanito Alimaña",
-      "grupo": "admin",
-      "rol": "Lider Técnico"
-    },
-    {
-      "imagen": "",
-      "nombre": "Lucas Arancibia",
-      "grupo": "desarrollador",
-      "rol": "Frontend"
-    },
-    {
-      "imagen": "src/assets/Equipo-img/test.avif",
-      "nombre": "Juanito Alimaña",
-      "grupo": "desarrollador",
-      "rol": "Backend"
-    },
-    {
-
-      "nombre": "Juanito Alimaña",
-      "grupo": "desarrollador",
-      "rol": "Backend"
-    },
-    {
-      "imagen": "src/assets/Equipo-img/test.avif",
-      "nombre": "Juanito Alimaña",
-      "grupo": "desarrollador",
-      "rol": "Frontend"
-    },
-    {
-      "imagen": "src/assets/Equipo-img/test.avif",
-      "nombre": "Juanito Alimaña",
-      "grupo": "desarrollador",
-      "rol": "Frontend"
-    },
-    {
-      "imagen": "",
-      "nombre": "Juanito Alimaña",
+      "imagen": "src/assets/Equipo-img/Jose_de_la_Fuente.jpg",
+      "nombre": "Jose de la Fuente",
       "grupo": "seguridad",
-      "rol": "QA"
+      "rol": "Lider de Seguridad",
+      "github": "https://github.com/zkillerzjt"
+    },
+    {
+      "imagen": "src/assets/Equipo-img/LukasMedina.jpeg",
+      "nombre": "Lukas Medina",
+      "grupo": "admin",
+      "rol": "Arquitecto",
+      "github": "https://github.com/lukas-577"
+    },
+    {
+      "imagen": "src/assets/Equipo-img/DylanFernandez.jpeg",
+      "nombre": "Dylan Fernandez",
+      "grupo": "admin",
+      "rol": "Product Owner",
+      "github": "https://github.com/Dylannton"
     },
     {
       "imagen": "",
