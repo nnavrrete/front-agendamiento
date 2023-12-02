@@ -16,7 +16,7 @@ function OfferCard({ paquete, cardsToShow, VITE_PATH_IMAGES, handleBuy}) {
   const firstImage = cleanedImages.length > 0 ? cleanedImages[0] : '';
 
   // Construye la URL completa de la primera imagen
-  const imageUrl = `${VITE_PATH_IMAGES}${firstImage}`;
+  const imageUrl = `${VITE_PATH_IMAGES}${firstImage}`
   
   
 

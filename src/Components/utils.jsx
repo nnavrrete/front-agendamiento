@@ -7,6 +7,7 @@ import { TbMassage, TbBeach } from "react-icons/tb";
 import { RiTempColdLine } from "react-icons/ri";
 import { TbBathFilled } from "react-icons/tb";
 import { GrRestaurant } from "react-icons/gr";
+
 //import { FaPeopleGroup } from 'react-icons/fa'; este icono genera error
 
 
@@ -33,6 +34,8 @@ export const serviceIcons = {
 
 };
 
+
+
 export const renderStars = (valoracion) => {
     const totalStars = 5;
     let stars = [];
@@ -50,7 +53,7 @@ export const renderStars = (valoracion) => {
 
 export const renderServiceIcons = (services) => {
     return services.split(', ').map((service, index) => (
-        <span className='p-3' title={service} key={`serviceIcon_${index}` }>
+        <span className=' p-3' title={service} key={`serviceIcon_${index}` }>
             {serviceIcons[service] || service}
         </span>
     ));
@@ -71,6 +74,25 @@ export function formatFecha(fecha) {
   
     // Formatea la fecha en el formato deseado (DD-Mes)
     const formattedFecha = `${dia} ${nombreMes}`;
+    
+    return formattedFecha;
+  }
+
+  export function formatFechaA(fecha) {
+    const meses = [
+      "Ene", "Feb", "Mar", "Abr", "May", "Jun",
+      "Jul", "Ago", "Sep", "Oct", "Nov", "Dic"
+    ];
+  
+    const parts = fecha.split('-'); // Divide la fecha en partes: año, mes y día
+    const [año, month, dia] = parts;
+
+    
+    // Obtiene el nombre del mes usando el número del mes
+    const nombreMes = meses[parseInt(month) - 1];
+  
+    // Formatea la fecha en el formato deseado (DD-Mes)
+    const formattedFecha = `${dia} ${nombreMes} ${año}`;
     
     return formattedFecha;
   }

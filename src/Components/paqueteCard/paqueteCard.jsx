@@ -3,7 +3,8 @@ import './paqueteCard.css';  // Asegúrate de tener el archivo CSS correspondien
 import Slider from 'react-slick'; // Importa el Slider de react-slick
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { renderStars, renderServiceIcons } from '../utils.jsx';
+import { renderStars, renderServiceIcons, formatFechaA  } from '../utils.jsx';
+import 'bootstrap/dist/css/bootstrap.min.css'; 
 
 
 const PaqueteCard = ({ paquete, handleBuy }) => {
@@ -55,7 +56,14 @@ const PaqueteCard = ({ paquete, handleBuy }) => {
             <div className="paqueteContent">
                 <div className="paqueteCardHeader">
                     <h2>{nombre}</h2>
-                    <p>{fechainit} - {fechafin}</p>
+                    <div className="">
+                        <p>
+                         <span className='bg-secondary text-white fw-bold rounded p-2 ida me-2'>{formatFechaA(fechainit)}
+                         </span>
+                            
+                         <span className='bg-primary text-white fw-bold rounded p-2'>{formatFechaA(fechafin)}</span>
+                     </p>
+                     </div>
                     <p>{descripcion}</p>
                     <div className="paqueteCardValoracion">
                         <p> {nombre_hotel} </p>
@@ -70,17 +78,17 @@ const PaqueteCard = ({ paquete, handleBuy }) => {
                         {renderServiceIcons(info_paquete.servicios_habitacion)}
                     </div>
                     <div className="paqueteCardPrice">
-                        <p>{`Vuelo $${precio_vuelo}`}</p>
+                        <p>{`Vuelo $${precio_vuelo}`} {}</p>
                         <p>{`Noche $${precio_noche}`}</p>
                     </div>
                     <div className="paqueteCardPriceTotal">
-                        <div className="precioUnit">
-                            <p>{`$${precio_vuelo + (precio_noche * diferenciaEnDias)}`}</p>
-
+                        <div className="precioUnit fs-5">
+                           <div className="row"> <p>Viajando con </p> </div>
+                            <div className="row">  </div>
                         </div>
-                        <div className="paqueteCardPriceTotalPersona">
-                            <p>{`Final ${total_personas} personas`}</p>
-                            <div className="TotalPersona">
+                        <div className="paqueteCardPriceTotalPersona ">
+                            <p className='bg-secondary-subtle w-100 rounded fw-bold p-2 mt-1'>{`Final ${total_personas} personas`}</p>
+                            <div className="TotalPersona fw-bold">
                                 <p> {`$${precio_vuelo * total_personas + precio_noche * diferenciaEnDias}`} </p>
                             </div>
                         </div>

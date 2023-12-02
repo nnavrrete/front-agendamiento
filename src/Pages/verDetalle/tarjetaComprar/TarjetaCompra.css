@@ -21,6 +21,7 @@ background-color: whitesmoke;
     font-size: 1rem;
     width: 50%;
     margin-top: 1rem;
+    
 }
 
 /* Consulta de medios para pantallas más pequeñas */
@@ -32,4 +33,25 @@ background-color: whitesmoke;
     .tarjeta-compra {
         width: 100%;
     }
+}
+
+.servicesContainer span:hover{
+
+    background-color: #023047;
+    color: white;
+    transform: scale(1.2);
+    transition: color  0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out;
+    border-radius: 100px;
+
+}
+
+.comprar-button:hover{
+
+    background-color: #023047;
+    color: white;
+    
+    transition: color  0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out;
+    border-radius: 100px;
 }

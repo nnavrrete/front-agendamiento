@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 
@@ -6,9 +6,12 @@ import './Filtros.css';
 
 import Estrellas from '../Estrellas';
 
-const Filtros = ({ filtrarPaquetes }) => {
+const Filtros = ({ filtrarPaquetes, largopaquete }) => {
     const [stars, setStars] = useState('');
     const [serviceTypes, setServiceTypes] = useState([]);
+    const [paquetesTotales, setPaquetesTotales] = useState(0);
+
+
 
     const handleReset = () => {
         setStars('');
@@ -51,6 +54,7 @@ const Filtros = ({ filtrarPaquetes }) => {
                     Estrellas
                 </legend>
                 <Estrellas valoracion={parseInt(stars)} onStarClick={handleStarClick} labelId="stars" />
+                
             </FormGroup>
 
             <FormGroup className='contenedor-servicios'>
@@ -73,7 +77,7 @@ const Filtros = ({ filtrarPaquetes }) => {
                     ))}
                 </div>
             </FormGroup>
-
+           <div className="paquetesRestantes mb-4"><span>Paquetes Restantes: {largopaquete}</span></div>
             <div className="botones">
                 <Button onClick={handleFilterClick}>
                     <i className="bi bi-funnel-fill"></i>

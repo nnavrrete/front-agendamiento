@@ -34,8 +34,8 @@ function OfferCard({ paquete, cardsToShow, VITE_PATH_IMAGES, handleBuy}) {
           </div>
           <div className="d-flex justify-content-between">
           <div className="fecha"> <div className="d-flex justify-content-between ">
-              <div className="bg-secondary text-white fw-bold rounded p-2 ida me-2">{paquete.fecha_init} 05 Nov </div>
-              <div className="bg-primary text-white fw-bold rounded p-2"> {paquete.fecha_fin} 10 Nov</div>  
+              <div className="bg-secondary text-white fw-bold rounded p-2 ida me-2">{formatFecha(paquete.fechainit)} </div>
+              <div className="bg-primary text-white fw-bold rounded p-2"> {formatFecha(paquete.fechafin)}</div>  
             </div>
             <div className="bg-secondary-subtle w-100 rounded fw-bold p-2 mt-1" style={{color :"black"}}> Para {paquete.total_personas} Personas</div>
             </div>
