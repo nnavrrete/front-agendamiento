@@ -60,21 +60,31 @@ export const renderServiceIcons = (services) => {
 };
 
 export function formatFecha(fecha) {
+    if (typeof fecha !== 'string') {
+      // Manejar el caso en que fecha no es una cadena (por ejemplo, proporcionar un valor predeterminado o lanzar un error)
+      return 'Fecha no válida';
+    }
+  
     const meses = [
       "Ene", "Feb", "Mar", "Abr", "May", "Jun",
       "Jul", "Ago", "Sep", "Oct", "Nov", "Dic"
     ];
   
     const parts = fecha.split('-'); // Divide la fecha en partes: año, mes y día
+  
+    if (parts.length !== 3) {
+      // Manejar el caso en que fecha no tenga el formato esperado
+      return 'Formato de fecha no válido';
+    }
+  
     const [year, month, dia] = parts;
-
-    
-    // Obtiene el nombre del mes usando el número del mes
+  
+    // Obtener el nombre del mes usando el número del mes
     const nombreMes = meses[parseInt(month) - 1];
   
-    // Formatea la fecha en el formato deseado (DD-Mes)
+    // Formatear la fecha en el formato deseado (DD-Mes)
     const formattedFecha = `${dia} ${nombreMes}`;
-    
+  
     return formattedFecha;
   }
 

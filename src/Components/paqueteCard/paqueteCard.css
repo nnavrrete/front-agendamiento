@@ -48,8 +48,15 @@
     cursor: pointer;
 }
 
+
 .buyButton button:hover {
-    background-color: #a88d1e;
+        background-color: #023047;
+        color: white;
+        transition: color  0.3s ease-in-out;
+        transition: background-color 0.3s ease-in-out;
+        border-radius: 100px;
+    
+    
 }
 
 /* Estilos comunes para secciones de la tarjeta con servicios, valoración y precios */
@@ -186,3 +193,14 @@
     border-radius: 1000px;
 
 } */
+
+/* Estilos para el ícono de servicio cuando se pasa el ratón sobre él */
+.paqueteCardServicios span:hover {
+    background-color: #023047;
+    color: white;
+    transform: scale(1.2);
+    transition: color  0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out;
+    border-radius: 100px;
+    font-size: 20px;
+  }
