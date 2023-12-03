@@ -31,6 +31,8 @@
     object-fit: cover;
 }
 
+
+
 /* Botón de compra y su estado hover */
 .buyButton {
     display: flex;
@@ -75,6 +77,8 @@
 
 /* Estilos específicos para valoración y precio */
 .paqueteCardValoracion {
+    margin-top: 50px;
+    border-top:1px solid #645e5e  ;
     gap: 1rem;
 }
 
