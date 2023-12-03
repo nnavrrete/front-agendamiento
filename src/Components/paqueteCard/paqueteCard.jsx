@@ -15,6 +15,7 @@ const PaqueteCard = ({ paquete, handleBuy }) => {
     // Convierte las fechas a objetos Date
     const fechaInicio = new Date(fechainit);
     const fechaFin = new Date(fechafin);
+    
 
     // Calcula la diferencia en milisegundos
     const diferenciaEnMilisegundos = fechaFin - fechaInicio;
@@ -43,11 +44,14 @@ const PaqueteCard = ({ paquete, handleBuy }) => {
 
     return (
         <div className="paqueteCard">
+            
+            
             <div className="paqueteCardImages">
                 <Slider key={`slider-${paquete.id}`} {...sliderSettings}>
                     {imageUrls.map((url, index) => (
                         <div key={index}> {/* <-- Here's the potential issue */}
                             <img src={url} alt={`Imagen ${index + 1}`} />
+                            
                         </div>
                     ))}
 
@@ -56,18 +60,20 @@ const PaqueteCard = ({ paquete, handleBuy }) => {
             <div className="paqueteContent">
                 <div className="paqueteCardHeader">
                     <h2>{nombre}</h2>
-                    <div className="">
+                    <div className="w-50">
                         <p>
                          <span className='bg-secondary text-white fw-bold rounded p-2 ida me-2'>{formatFechaA(fechainit)}
                          </span>
                             
                          <span className='bg-primary text-white fw-bold rounded p-2'>{formatFechaA(fechafin)}</span>
+                       
+
                      </p>
                      </div>
-                    <p>{descripcion}</p>
-                    <div className="paqueteCardValoracion">
-                        <p> {nombre_hotel} </p>
-                        <div className="Estrellas">
+                    
+                    <div className="paqueteCardValoracion" style={{borderTop:""}}>
+                        <p style={{fontSize:'2rem'} } className="mt-4"> {nombre_hotel} </p>
+                        <div className="Estrellas mt-4" style={{fontSize:'3rem'}}>
                             {renderStars(valoracion_hotel)}
                         </div>
                     </div>
@@ -82,12 +88,12 @@ const PaqueteCard = ({ paquete, handleBuy }) => {
                         <p>{`Noche $${precio_noche}`}</p>
                     </div>
                     <div className="paqueteCardPriceTotal">
-                        <div className="precioUnit fs-5">
+                        <div className="aerolinea fs-5">
                            <div className="row"> <p>Viajando con </p> </div>
                             <div className="row">  </div>
                         </div>
                         <div className="paqueteCardPriceTotalPersona ">
-                            <p className='bg-secondary-subtle w-100 rounded fw-bold p-2 mt-1'>{`Final ${total_personas} personas`}</p>
+                            <p className=' w-100 rounded fw-bold p-2 mt-1'>{`Final ${total_personas} personas`}</p>
                             <div className="TotalPersona fw-bold">
                                 <p> {`$${precio_vuelo * total_personas + precio_noche * diferenciaEnDias}`} </p>
                             </div>

@@ -7,11 +7,18 @@ import './Filtros.css';
 import Estrellas from '../Estrellas';
 
 const Filtros = ({ filtrarPaquetes, largopaquete }) => {
-    const [stars, setStars] = useState('');
-    const [serviceTypes, setServiceTypes] = useState([]);
+    const storedStars = localStorage.getItem('stars') || '';
+    const storedServiceTypes = JSON.parse(localStorage.getItem('serviceTypes')) || [];
+
+    const [stars, setStars] = useState(storedStars);
+    const [serviceTypes, setServiceTypes] = useState(storedServiceTypes);
     const [paquetesTotales, setPaquetesTotales] = useState(0);
 
-
+    useEffect(() => {
+        // Guardar filtros en el localStorage cada vez que se actualizan
+        localStorage.setItem('stars', stars);
+        localStorage.setItem('serviceTypes', JSON.stringify(serviceTypes));
+    }, [stars, serviceTypes]);
 
     const handleReset = () => {
         setStars('');
