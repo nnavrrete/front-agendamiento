@@ -43,7 +43,8 @@ background-color: whitesmoke;
     transition: color  0.3s ease-in-out;
     transition: background-color 0.3s ease-in-out;
     border-radius: 100px;
-
+    font-size: 20px;
+    
 }
 
 
@@ -54,7 +55,13 @@ background-color: whitesmoke;
     color: white;
     transition: color  0.3s ease-in-out;
     transition: background-color 0.3s ease-in-out;
+<<<<<<< HEAD
     
 }
 
 
+=======
+    border-radius: 100px;
+}
+
+>>>>>>> 0432701cb36b94fea2aeb55297b34ec01a09c7f1
