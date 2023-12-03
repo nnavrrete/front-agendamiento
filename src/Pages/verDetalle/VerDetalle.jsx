@@ -45,10 +45,10 @@ const VerDetalle = () => {
         <div className="detalle mt-3 mx-auto" style={{width:"90%", alignItems:'center'}} >
         <h1 className="mx-auto mt-2 w-75">{nombre_hotel}</h1>
         <div className="d-flex justify-content-center mt-2 mx-auto verDetalleContainer w-100">
-          <div className="galeria-container">
+          <div className="galeria-container" >
             <ImageGallery items={imageGalleryItems} />
           </div>
-          <div className="tarjeta-compra-container ms-2">
+          <div className="tarjeta-compra-container ms-2 ">
             <TarjetaCompra paquete={paquete} />
           </div>
         </div>

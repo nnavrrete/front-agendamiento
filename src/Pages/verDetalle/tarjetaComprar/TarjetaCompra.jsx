@@ -52,7 +52,7 @@ const diferenciaEnDias = diferenciaEnMilisegundos / (1000 * 60 * 60 * 24);
       <p>{descripcion_hotel}</p>
       <p1>{<div className="starsContainer" style={{fontSize:'2rem', marginTop:"-20px"}}>{renderStars(valoracion_hotel)}</div>}</p1>
       <p>{descripcion_habitacion}</p>
-      <p>{<div className="servicesContainer "style={{fontSize:'1.5rem'}}>{renderServiceIcons(servicios_habitacion)}</div>}</p>
+      <p>{<div className="servicesContainer "style={{fontSize:'1.5rem'}}>{renderServiceIcons(servicios_habitacion)}<p></p> </div>}</p>
       <h4>{`Final ${total_personas} personas`}</h4>
       <h4> {`$${precio_vuelo * total_personas + precio_noche * diferenciaEnDias}`} </h4>
         <button className="comprar-button">Comprar</button>

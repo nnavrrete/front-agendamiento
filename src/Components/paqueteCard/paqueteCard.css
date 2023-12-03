@@ -177,6 +177,14 @@
         display: inline-block;
         vertical-align: bottom;
     }
+    .buyButton{
+
+        position: relative;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
 }
 
 
@@ -190,3 +198,19 @@
     border-radius: 1000px;
 
 } */
+.paqueteCardServicios {
+    display: flex;
+    justify-content: space-around; /* Ajusta según tus necesidades de diseño */
+}
+
+.paqueteCardServicios span {
+    font-size: 24px; /* Tamaño inicial de los iconos, ajusta según tus necesidades */
+}
+
+/* Media query para ajustar el tamaño de los iconos en pantallas más pequeñas */
+@media screen and (max-width: 768px) {
+    .paqueteCardServicios span {
+        font-size: 20px;
+    }
+}
+

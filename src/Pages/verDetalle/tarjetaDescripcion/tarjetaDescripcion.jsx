@@ -1,5 +1,3 @@
-// tarjetaDescripcion.jsx
-
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./tarjetaDescripcion.css"
 import { useLocation } from "react-router-dom";

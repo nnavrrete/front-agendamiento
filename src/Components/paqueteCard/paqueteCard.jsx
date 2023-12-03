@@ -60,7 +60,7 @@ const PaqueteCard = ({ paquete, handleBuy }) => {
             <div className="paqueteContent">
                 <div className="paqueteCardHeader">
                     <h2>{nombre}</h2>
-                    <div className="w-50">
+                    <div className="w-100">
                         <p>
                          <span className='bg-secondary text-white fw-bold rounded p-2 ida me-2'>{formatFechaA(fechainit)}
                          </span>
@@ -71,9 +71,9 @@ const PaqueteCard = ({ paquete, handleBuy }) => {
                      </p>
                      </div>
                     
-                    <div className="paqueteCardValoracion" style={{borderTop:""}}>
-                        <p style={{fontSize:'2rem'} } className="mt-4"> {nombre_hotel} </p>
-                        <div className="Estrellas mt-4" style={{fontSize:'3rem'}}>
+                    <div className="paqueteCardValoracion" style={{ borderTop: "" }}>
+                        <p style={{ fontSize: '2rem' }} className="mt-4"> {nombre_hotel} </p>
+                        <div className="Estrellas mt-4" style={{ fontSize: '3rem' }}>
                             {renderStars(valoracion_hotel)}
                         </div>
                     </div>
@@ -99,7 +99,9 @@ const PaqueteCard = ({ paquete, handleBuy }) => {
                             </div>
                         </div>
                         <div className="buyButton">
+                            <div className=' '>
                             <button onClick={() => handleBuy(paquete)}>Comprar</button>
+                            </div>
                         </div>
                     </div>
 
