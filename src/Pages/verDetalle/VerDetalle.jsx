@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { getComentario } from "../../api/getComentario.js";
 import { useLocation } from "react-router-dom";
 import Modal from "react-modal";
 import Footer from "../../utils/Footer/index.jsx";
@@ -15,6 +16,9 @@ import Comentario from "./comentario/Index.jsx";
 Modal.setAppElement("#root");
 
 const VerDetalle = () => {
+  const [comentarios, setComenario] = useState([]);
+  const [Loading, setLoading] = useState();
+  const [error, setError] = useState();
   const location = useLocation();
   const paquete = location.state;
 
@@ -39,12 +43,30 @@ const VerDetalle = () => {
     original: `${VITE_PATH_IMAGES}${image.trim()}`,
   }));
 
+
+  useEffect(() => {
+    const fetchComentarios = async () => {
+        try {
+            const data = await getComentario(paquete.id);
+            setComenario(data);
+        } catch (error) {
+            setError(error);
+        } finally {
+            setLoading(false);
+        }
+    };
+
+    fetchComentarios();
+}, []);
+
+
+
   return (
     <div className="">
       <div className="header">
         <Header />
-        <div className="detalle mt-3 mx-auto" style={{width:"90%", alignItems:'center'}} >
-        <h1 className="mx-auto mt-2 w-75">{nombre_hotel}</h1>
+        <div className="detalle mt-3 mx-auto" style={{width:"90%"}} >
+        <h1 className="col-xxl-2 mt-2 mb-2" style={{width:"90%"}}>{nombre_hotel}</h1>
         <div className="d-flex justify-content-center mt-2 mx-auto verDetalleContainer w-100">
           <div className="galeria-container" >
             <ImageGallery items={imageGalleryItems} />
@@ -77,12 +99,6 @@ const VerDetalle = () => {
            texto="Interesante perspectiva. Estoy de acuerdo."
            imagenPerfil="https://i0.wp.com/ellibero.s3.amazonaws.com/nuevoellibero/wp-content/uploads/2023/11/cubanas.jpg?fit=720%2C720&ssl=1"
            valoracion={4}
-           />
-           <Comentario
-           usuario="Jorge Morris"
-           texto="¿Que sistema operativo ocupan los aviones de su aerolinea?."
-           imagenPerfil="https://i0.wp.com/ellibero.s3.amazonaws.com/nuevoellibero/wp-content/uploads/2023/11/cubanas.jpg?fit=720%2C720&ssl=1"
-           valoracion={5}
            />
         </div>
       </div>

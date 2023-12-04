@@ -31,6 +31,7 @@ export const serviceIcons = {
     'Desayuno gourmet': <MdFoodBank />,
     'Restaurante gourmet':<GrRestaurant />,
     //'Sala de Conferencias': <FaPeopleGroup />,
+     'Servicio de habitaciones':<FaBed/>
 
 };
 

@@ -46,7 +46,7 @@
     color: white;
     padding: 10px 20px;
     font-size: 16px;
-    border-radius: 20px;
+    border-radius: 10px;
     cursor: pointer;
 }
 
@@ -56,7 +56,7 @@
         color: white;
         transition: color  0.3s ease-in-out;
         transition: background-color 0.3s ease-in-out;
-        border-radius: 100px;
+        border-radius: 10px;
     
     
 }
@@ -205,7 +205,7 @@
     border-radius: 1000px;
 
 } */
-<<<<<<< HEAD
+
 .paqueteCardServicios {
     display: flex;
     justify-content: space-around; /* Ajusta según tus necesidades de diseño */
@@ -221,17 +221,3 @@
         font-size: 20px;
     }
 }
-
-=======
-
-/* Estilos para el ícono de servicio cuando se pasa el ratón sobre él */
-.paqueteCardServicios span:hover {
-    background-color: #023047;
-    color: white;
-    transform: scale(1.2);
-    transition: color  0.3s ease-in-out;
-    transition: background-color 0.3s ease-in-out;
-    border-radius: 100px;
-    font-size: 20px;
-  }
->>>>>>> 0432701cb36b94fea2aeb55297b34ec01a09c7f1
