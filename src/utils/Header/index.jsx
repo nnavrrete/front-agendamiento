@@ -17,8 +17,8 @@ function NavBar() {
                         <Nav.Link className='link-izq d-flex justify-content-center' href="/nosotros">
                             <i className="bi bi-info-circle-fill"></i> Nosotros
                         </Nav.Link>
-                        <Nav.Link className='link-izq d-flex justify-content-center' href="">
-                            <i className="bi bi-telephone-fill"></i> Contacto
+                        <Nav.Link className='link-izq d-flex justify-content-center' href="/faq">
+                            <i className="bi bi-question-circle-fill"></i> FAQ
                         </Nav.Link>
                     </Nav>
                     <Nav className="mr-auto">
