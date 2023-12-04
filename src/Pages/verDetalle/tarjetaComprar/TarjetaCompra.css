@@ -47,21 +47,35 @@ background-color: whitesmoke;
     
 }
 
-
-
 .comprar-button:hover{
 
     background-color: #023047;
     color: white;
     transition: color  0.3s ease-in-out;
     transition: background-color 0.3s ease-in-out;
-<<<<<<< HEAD
     
 }
 
+.servicioContainer::before {
+    content: attr(data-title);
+    position: absolute;
+    background-color: #FB8500;
+    color: white;
+    padding: 8px;
+    border-radius: 4px;
+    font-size: 15px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    margin-right: -50px;
+    margin-top: -30px;
+    margin-left: 15px;
 
-=======
-    border-radius: 100px;
-}
-
->>>>>>> 0432701cb36b94fea2aeb55297b34ec01a09c7f1
+   
+    
+  }
+  
+  .servicioContainer:hover::before {
+    opacity: 1;
+    
+  }
+  

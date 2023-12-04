@@ -78,6 +78,12 @@ const VerDetalle = () => {
            imagenPerfil="https://i0.wp.com/ellibero.s3.amazonaws.com/nuevoellibero/wp-content/uploads/2023/11/cubanas.jpg?fit=720%2C720&ssl=1"
            valoracion={4}
            />
+           <Comentario
+           usuario="Jorge Morris"
+           texto="¿Que sistema operativo ocupan los aviones de su aerolinea?."
+           imagenPerfil="https://i0.wp.com/ellibero.s3.amazonaws.com/nuevoellibero/wp-content/uploads/2023/11/cubanas.jpg?fit=720%2C720&ssl=1"
+           valoracion={5}
+           />
         </div>
       </div>
       <Footer />

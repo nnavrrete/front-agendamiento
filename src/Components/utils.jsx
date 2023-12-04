@@ -52,13 +52,15 @@ export const renderStars = (valoracion) => {
 };
 
 export const renderServiceIcons = (services) => {
-    return services.split(', ').map((service, index) => (
-        <span className=' servicioContainer p-3' title={service} key={`serviceIcon_${index}` }>
-            {serviceIcons[service] || service}
-            
-        </span>
-        
-    ));
+  return services.split(', ').map((service, index) => (
+    <span
+      key={`serviceIcon_${index}`}
+      className='servicioContainer p-3'
+      data-title={service}  // Utilizamos data-* para almacenar el texto
+    >
+      {serviceIcons[service] || service}
+    </span>
+  ));
 };
 
 export function formatFecha(fecha) {
