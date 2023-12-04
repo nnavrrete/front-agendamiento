@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { getComentario } from "../../api/getComentario.js";
 import { useLocation } from "react-router-dom";
 import Modal from "react-modal";
 import Footer from "../../utils/Footer/index.jsx";
@@ -15,6 +16,9 @@ import Comentario from "./comentario/Index.jsx";
 Modal.setAppElement("#root");
 
 const VerDetalle = () => {
+  const [comentarios, setComenario] = useState([]);
+  const [Loading, setLoading] = useState();
+  const [error, setError] = useState();
   const location = useLocation();
   const paquete = location.state;
 
@@ -39,12 +43,30 @@ const VerDetalle = () => {
     original: `${VITE_PATH_IMAGES}${image.trim()}`,
   }));
 
+
+  useEffect(() => {
+    const fetchComentarios = async () => {
+        try {
+            const data = await getComentario(paquete.id);
+            setComenario(data);
+        } catch (error) {
+            setError(error);
+        } finally {
+            setLoading(false);
+        }
+    };
+
+    fetchComentarios();
+}, []);
+
+
+
   return (
     <div className="">
       <div className="header">
         <Header />
-        <div className="detalle mt-3 mx-auto" style={{width:"90%", alignItems:'center'}} >
-        <h1 className="mx-auto mt-2 w-75">{nombre_hotel}</h1>
+        <div className="detalle mt-3 mx-auto" style={{width:"90%"}} >
+        <h1 className="col-xxl-2 mt-2 mb-2" style={{width:"90%"}}>{nombre_hotel}</h1>
         <div className="d-flex justify-content-center mt-2 mx-auto verDetalleContainer w-100">
           <div className="galeria-container" >
             <ImageGallery items={imageGalleryItems} />
@@ -56,28 +78,42 @@ const VerDetalle = () => {
         <div className="d-flex justify-content-center mx-auto tarjeta-descripcion-container mt-3 ">
           <TarjetaDescripcion />
           </div>
-          <Comentario        
-           usuario="matias chuope"
-           texto="¡Wow! No puedo dejar de expresar lo encantado que estoy con este increíble paquete de vuelo. Desde el momento en que comencé a explorar las opciones hasta la reserva del vuelo, la experiencia fue simplemente excepcional.
+          <div>
+      {comentarios.length > 0 ? (
+        // Si hay comentarios, mapea sobre cada uno y renderiza el componente Comentario
+        comentarios.map((comentario, index) => (
+          <Comentario
+            key={index}
+            usuario={comentario.usuario}
+            texto={comentario.texto}
+            imagenPerfil={comentario.imagenPerfil}
+            valoracion={comentario.valoracion}
+          />
+        ))
+      ) : (
+        
+        <div className="d-flex align-items-center  justify-content-center">
+        <div className="mt-5 align-items-center w-50 ">
+            <h4 className='ms-4'>No hay comentarios todavia...</h4>
+        </div>
+        <div className="d-flex mt-4">
+        <img
+           src="/error.png"
+           alt="yamsha"
+           className="img-fluid"
+           style={{
+           width: '100%', // Hace que la imagen sea completamente responsiva
+           maxWidth: '50vh',
+           borderRadius: '50%', // Establece el radio de borde al 50% para formar un círculo
+      
+           }}
+  />
+</div>
 
-           La selección de vuelos fue variada y se adaptaba perfectamente a mis necesidades de viaje. La información detallada sobre las ciudades de origen y destino, las fechas de ida y vuelta, así como la cantidad de personas, hizo que la planificación fuera muy fácil y conveniente."
-           imagenPerfil="https://www.mundodeportivo.com/alfabeta/hero/2023/06/crash-bandicoot.1686205719.5438.jpg?width=1200&aspect_ratio=16:9"
-           valoracion={4}
-         />
-   
-         <Comentario
-           usuario="Nicolas777"
-           texto="Muy útil. Gracias por compartir."
-           imagenPerfil="https://playcontestofchampions.com/wp-content/uploads/2021/11/champion-spider-man-morales-720x720.jpg"
-           valoracion={5}
-         />
-   
-         <Comentario
-           usuario="Coni72"
-           texto="Interesante perspectiva. Estoy de acuerdo."
-           imagenPerfil="https://i0.wp.com/ellibero.s3.amazonaws.com/nuevoellibero/wp-content/uploads/2023/11/cubanas.jpg?fit=720%2C720&ssl=1"
-           valoracion={4}
-           />
+    </div>
+      )}
+    </div>
+           
         </div>
       </div>
       <Footer />
